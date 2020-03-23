@@ -6,10 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class UserOauth2DbServiceApplication {
+public class ESchoolServiceUserOauth2DbApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UserOauth2DbServiceApplication.class, args);
+        SpringApplication.run(ESchoolServiceUserOauth2DbApplication.class, args);
     }
 
 }

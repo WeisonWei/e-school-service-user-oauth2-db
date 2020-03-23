@@ -5,7 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootTest
-class UserOauth2DbServiceApplicationTests {
+class ESchoolServiceUserOauth2DbApplicationTests {
 
     @Test
     void contextLoads() {
