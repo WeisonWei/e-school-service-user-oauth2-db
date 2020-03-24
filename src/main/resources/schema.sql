@@ -1,4 +1,4 @@
-create database IF NOT EXISTS userService;
+-- create database userService;
 
 CREATE TABLE IF NOT EXISTS `clientdetails`
 (
@@ -14,8 +14,7 @@ CREATE TABLE IF NOT EXISTS `clientdetails`
     `additionalInformation`  varchar(4096) DEFAULT NULL,
     `autoApproveScopes`      varchar(256)  DEFAULT NULL,
     PRIMARY KEY (`appId`)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `oauth_access_token`
 (
@@ -27,8 +26,7 @@ CREATE TABLE IF NOT EXISTS `oauth_access_token`
     `authentication`    blob,
     `refresh_token`     varchar(256) DEFAULT NULL,
     PRIMARY KEY (`authentication_id`)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `oauth_approvals`
 (
@@ -38,8 +36,7 @@ CREATE TABLE IF NOT EXISTS `oauth_approvals`
     `status`         varchar(10)    DEFAULT NULL,
     `expiresAt`      timestamp NULL DEFAULT NULL,
     `lastModifiedAt` timestamp NULL DEFAULT NULL
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `oauth_client_details`
 (
@@ -55,8 +52,7 @@ CREATE TABLE IF NOT EXISTS `oauth_client_details`
     `additional_information`  varchar(4096) DEFAULT NULL,
     `autoapprove`             varchar(256)  DEFAULT NULL,
     PRIMARY KEY (`client_id`)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `oauth_client_token`
 (
@@ -66,20 +62,17 @@ CREATE TABLE IF NOT EXISTS `oauth_client_token`
     `user_name`         varchar(256) DEFAULT NULL,
     `client_id`         varchar(256) DEFAULT NULL,
     PRIMARY KEY (`authentication_id`)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `oauth_code`
 (
     `code`           varchar(256) DEFAULT NULL,
     `authentication` blob
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 CREATE TABLE IF NOT EXISTS `oauth_refresh_token`
 (
     `token_id`       varchar(256) DEFAULT NULL,
     `token`          blob,
     `authentication` blob
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;

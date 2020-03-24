@@ -25,14 +25,6 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     @Autowired
     DataSource dataSource;
 
-    /*@Bean
-    @Primary
-    @ConfigurationProperties(prefix = "spring.datasource")
-    public DataSource dataSource() {
-        // 配置数据源（注意，我使用的是 HikariCP 连接池），以上注解是指定数据源，否则会有冲突
-        return DataSourceBuilder.create().build();
-    }*/
-
     @Bean
     public TokenStore tokenStore() {
         // 基于 JDBC 实现，令牌保存到数据
