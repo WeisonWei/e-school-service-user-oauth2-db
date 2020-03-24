@@ -1,6 +1,6 @@
-create database userService;
+create database IF NOT EXISTS userService;
 
-CREATE TABLE `clientdetails`
+CREATE TABLE IF NOT EXISTS `clientdetails`
 (
     `appId`                  varchar(128) NOT NULL,
     `resourceIds`            varchar(256)  DEFAULT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE `clientdetails`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE `oauth_access_token`
+CREATE TABLE IF NOT EXISTS `oauth_access_token`
 (
     `token_id`          varchar(256) DEFAULT NULL,
     `token`             blob,
@@ -30,7 +30,7 @@ CREATE TABLE `oauth_access_token`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE `oauth_approvals`
+CREATE TABLE IF NOT EXISTS `oauth_approvals`
 (
     `userId`         varchar(256)   DEFAULT NULL,
     `clientId`       varchar(256)   DEFAULT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE `oauth_approvals`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE `oauth_client_details`
+CREATE TABLE IF NOT EXISTS `oauth_client_details`
 (
     `client_id`               varchar(128) NOT NULL,
     `resource_ids`            varchar(256)  DEFAULT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE `oauth_client_details`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE `oauth_client_token`
+CREATE TABLE IF NOT EXISTS `oauth_client_token`
 (
     `token_id`          varchar(256) DEFAULT NULL,
     `token`             blob,
@@ -69,14 +69,14 @@ CREATE TABLE `oauth_client_token`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE `oauth_code`
+CREATE TABLE IF NOT EXISTS `oauth_code`
 (
     `code`           varchar(256) DEFAULT NULL,
     `authentication` blob
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
-CREATE TABLE `oauth_refresh_token`
+CREATE TABLE IF NOT EXISTS `oauth_refresh_token`
 (
     `token_id`       varchar(256) DEFAULT NULL,
     `token`          blob,
